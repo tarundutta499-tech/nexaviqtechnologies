@@ -1,0 +1,13 @@
+# Nexaviq Technologies - Security Contact & Vulnerability Disclosure
+# RFC 9116 Standard Specification
+
+Contact: mailto:supporthelp@nexaviq.com
+Preferred-Languages: en
+Canonical: https://nexaviqtechnologies.com/.well-known/security.txt
+Policy: https://nexaviqtechnologies.com/quality
+Acknowledgments: https://nexaviqtechnologies.com/about
+
+# Guidelines:
+# 1. Report any potential security vulnerabilities directly to supporthelp@nexaviq.com.
+# 2. Please allow up to 48 hours for our security operations desk to acknowledge and triage your submission.
+# 3. We ask that you practice responsible disclosure and do not compromise customer data.
