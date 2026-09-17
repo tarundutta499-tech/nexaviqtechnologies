@@ -27,25 +27,25 @@ export default function Process() {
   };
 
   return (
-    <section id="how-we-work" className="py-24 bg-[#050816] text-white relative overflow-hidden border-b border-white/[0.08]">
+    <section id="how-we-work" className="py-24 bg-white text-slate-900 relative overflow-hidden border-b border-slate-200/80">
       {/* Ambient lighting */}
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[35rem] h-[25rem] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[35rem] h-[25rem] bg-indigo-300/15 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="max-w-3xl mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-400 text-xs font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             <span>4-Stage Operating Pipeline</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black font-editorial tracking-tight text-white uppercase leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-black font-editorial tracking-tight text-slate-900 uppercase leading-tight">
             HOW WE <br />
             <span className="text-gradient-blue">WORK FOR YOU.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
             {companyConfig.howWeWork.subheadline}
           </p>
         </div>
@@ -60,37 +60,37 @@ export default function Process() {
                 onClick={() => setActiveStep(idx)}
                 className={`cursor-pointer rounded-3xl p-6 sm:p-7 border transition-all duration-300 space-y-5 flex flex-col justify-between ${
                   isSelected
-                    ? "bg-[#071B4D] border-blue-400/60 shadow-2xl shadow-blue-500/20 scale-[1.02]"
-                    : "bg-white/[0.02] border-white/[0.08] hover:bg-white/[0.05] hover:border-white/20"
+                    ? "bg-white border-blue-600 shadow-xl shadow-blue-500/10 ring-2 ring-blue-500/20 scale-[1.02]"
+                    : "bg-slate-50 border-slate-200/80 hover:bg-white hover:border-slate-300 shadow-xs"
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className={`font-mono text-xs font-black px-2.5 py-1 rounded-full ${
-                    isSelected ? "bg-blue-500 text-white" : "bg-white/10 text-slate-400"
+                    isSelected ? "bg-blue-600 text-white" : "bg-slate-200/80 text-slate-600"
                   }`}>
                     STEP {step.num}
                   </span>
-                  <div className="w-10 h-10 rounded-xl bg-white/[0.04] flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
                     {getStepIcon(step.num)}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <h3 className={`text-xl font-black font-editorial uppercase tracking-tight ${
-                    isSelected ? "text-white" : "text-slate-200"
+                    isSelected ? "text-blue-600" : "text-slate-900"
                   }`}>
                     {step.name}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                     {step.desc}
                   </p>
                 </div>
 
-                <div className="pt-3 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono text-slate-400">
-                  <span className={isSelected ? "text-blue-400 font-bold" : "text-slate-500"}>
+                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-mono text-slate-500">
+                  <span className={isSelected ? "text-blue-600 font-bold" : "text-slate-400"}>
                     {isSelected ? "Active Phase" : "Inspect Step"}
                   </span>
-                  <ArrowRight className={`w-3.5 h-3.5 ${isSelected ? "text-blue-400" : "text-slate-600"}`} />
+                  <ArrowRight className={`w-3.5 h-3.5 ${isSelected ? "text-blue-600" : "text-slate-400"}`} />
                 </div>
               </div>
             );
@@ -98,12 +98,12 @@ export default function Process() {
         </div>
 
         {/* Timeline Indicator Bar */}
-        <div className="mt-10 p-5 rounded-2xl bg-[#071B4D]/35 border border-white/10 flex items-center justify-between text-xs font-mono text-slate-300 backdrop-blur-md">
-          <span className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-blue-400" />
+        <div className="mt-10 p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between text-xs font-mono text-slate-600 shadow-xs">
+          <span className="flex items-center gap-2 font-medium">
+            <CheckCircle2 className="w-4 h-4 text-blue-600" />
             Typical Ramp-up Timeline: 10 to 14 Business Days to Full Go-Live
           </span>
-          <span className="hidden sm:inline text-slate-500">
+          <span className="hidden sm:inline text-slate-400">
             Structured SOP Ingestion &bull; Mock Scenarios &bull; Hypercare
           </span>
         </div>

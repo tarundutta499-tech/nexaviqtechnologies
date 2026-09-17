@@ -35,29 +35,29 @@ export default function Navbar() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#050816]/85 backdrop-blur-xl border-b border-white/[0.08] shadow-2xl shadow-black/50 py-3.5"
-            : "bg-[#050816]/40 backdrop-blur-md py-5 border-b border-white/[0.04]"
+            ? "bg-white/90 backdrop-blur-xl border-b border-slate-200/80 shadow-sm shadow-slate-900/5 py-3.5"
+            : "bg-white/70 backdrop-blur-md py-4 sm:py-5 border-b border-slate-200/50"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2563EB] to-[#7C3AED] flex items-center justify-center text-white font-extrabold text-lg shadow-lg shadow-blue-500/30 border border-white/20 group-hover:scale-105 transition-transform duration-300">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-violet-600 flex items-center justify-center text-white font-extrabold text-lg shadow-md shadow-blue-500/25 border border-white/40 group-hover:scale-105 transition-transform duration-300">
                 <span>N</span>
               </div>
               <div className="flex flex-col">
-                <span className="font-extrabold text-base tracking-tight text-white group-hover:text-blue-400 transition-colors uppercase">
-                  NEXAVIQ <span className="font-light text-slate-300 text-xs sm:text-sm">TECHNOLOGIES</span>
+                <span className="font-extrabold text-base tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors uppercase">
+                  NEXAVIQ <span className="font-semibold text-slate-500 text-xs sm:text-sm">TECHNOLOGIES</span>
                 </span>
-                <span className="text-[10px] text-slate-400 tracking-widest font-mono uppercase">
+                <span className="text-[10px] text-slate-500 tracking-widest font-semibold uppercase">
                   BPO &amp; Customer Operations
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center gap-1 bg-[#071B4D]/40 border border-white/[0.08] px-4 py-1.5 rounded-full backdrop-blur-md">
+            <nav className="hidden lg:flex items-center gap-1 bg-slate-100/90 border border-slate-200/90 px-3.5 py-1.5 rounded-full backdrop-blur-md shadow-xs">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
@@ -66,14 +66,14 @@ export default function Navbar() {
                     href={link.href}
                     className={`px-3.5 py-1.5 text-xs font-semibold rounded-full transition-all duration-200 flex items-center gap-1.5 ${
                       isActive
-                        ? "bg-blue-600 text-white shadow-md shadow-blue-500/30"
-                        : "text-slate-300 hover:text-white hover:bg-white/[0.06]"
+                        ? "bg-blue-600 text-white shadow-sm shadow-blue-500/30"
+                        : "text-slate-600 hover:text-slate-900 hover:bg-white/90"
                     }`}
                   >
                     <span>{link.name}</span>
                     {link.badge && (
                       <span className={`px-1.5 py-0.5 text-[9px] font-bold rounded-full uppercase tracking-wider ${
-                        isActive ? "bg-white/20 text-white" : "bg-blue-500/20 text-blue-400 border border-blue-400/30"
+                        isActive ? "bg-white/20 text-white" : "bg-violet-100 text-violet-700 border border-violet-200"
                       }`}>
                         {link.badge}
                       </span>
@@ -88,7 +88,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setIsBookingOpen(true)}
-                className="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-[#2563EB] to-[#4F46E5] hover:from-[#1D4ED8] hover:to-[#4338CA] transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 border border-white/20"
+                className="relative group inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/35 border border-white/20 active:scale-95"
               >
                 <span>Talk to Us</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -100,14 +100,14 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={() => setIsBookingOpen(true)}
-                className="px-3 py-1.5 text-[11px] font-bold text-white bg-blue-600 rounded-lg"
+                className="px-3 py-1.5 text-[11px] font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg shadow-sm shadow-blue-500/20"
               >
                 Talk to Us
               </button>
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-xl bg-white/[0.05] border border-white/10 text-slate-300 hover:text-white focus:outline-none"
+                className="p-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 focus:outline-none"
                 aria-label="Toggle menu"
               >
                 {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -118,7 +118,7 @@ export default function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-          <div className="lg:hidden bg-[#050816]/98 border-b border-white/10 px-4 pt-4 pb-6 mt-3 space-y-3 backdrop-blur-2xl animate-fade-in-up">
+          <div className="lg:hidden bg-white/95 border-b border-slate-200 px-4 pt-4 pb-6 mt-3 space-y-3 backdrop-blur-2xl shadow-xl animate-fade-in-up">
             <div className="space-y-1">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
@@ -129,32 +129,32 @@ export default function Navbar() {
                     onClick={() => setIsOpen(false)}
                     className={`flex items-center justify-between px-4 py-3 text-sm font-semibold rounded-xl transition-all ${
                       isActive
-                        ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
-                        : "text-slate-200 hover:text-white hover:bg-white/[0.05]"
+                        ? "bg-blue-50 text-blue-600 border border-blue-200 font-bold"
+                        : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                     }`}
                   >
                     <span className="flex items-center gap-2">
                       {link.name}
                       {link.badge && (
-                        <span className="px-1.5 py-0.5 text-[9px] font-bold bg-blue-500/20 text-blue-400 border border-blue-400/30 rounded-full">
+                        <span className="px-1.5 py-0.5 text-[9px] font-bold bg-violet-100 text-violet-700 border border-violet-200 rounded-full">
                           {link.badge}
                         </span>
                       )}
                     </span>
-                    <ChevronRight className="w-4 h-4 text-slate-500" />
+                    <ChevronRight className="w-4 h-4 text-slate-400" />
                   </Link>
                 );
               })}
             </div>
 
-            <div className="pt-2 border-t border-white/10">
+            <div className="pt-2 border-t border-slate-100">
               <button
                 type="button"
                 onClick={() => {
                   setIsOpen(false);
                   setIsBookingOpen(true);
                 }}
-                className="w-full flex items-center justify-center gap-2 py-3 text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl shadow-lg"
+                className="w-full flex items-center justify-center gap-2 py-3 text-xs font-bold text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 rounded-xl shadow-md shadow-blue-500/25"
               >
                 <PhoneCall className="w-4 h-4" />
                 <span>Talk to Our Team</span>

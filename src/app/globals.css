@@ -3,50 +3,33 @@
 @theme {
   --font-sans: var(--font-outfit), "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
   
-  --color-deep-navy: #050816;
-  --color-dark-blue: #071B4D;
+  --color-canvas: #F8FAFC;
+  --color-canvas-subtle: #F1F5F9;
+  --color-canvas-card: #FFFFFF;
+
   --color-electric-blue: #2563EB;
+  --color-electric-blue-dark: #1D4ED8;
+  --color-royal-blue: #0284C7;
   --color-brand-indigo: #4F46E5;
   --color-brand-violet: #7C3AED;
-  --color-light-bg: #F7F8FC;
-  --color-dark-text: #111827;
-
-  --color-brand-blue-50: #eff6ff;
-  --color-brand-blue-100: #dbeafe;
-  --color-brand-blue-200: #bfdbfe;
-  --color-brand-blue-400: #60a5fa;
-  --color-brand-blue-500: #2563eb;
-  --color-brand-blue-600: #1d4ed8;
-  --color-brand-blue-700: #1e40af;
-  --color-brand-blue-800: #1e3a8a;
+  --color-brand-purple: #9333EA;
+  --color-brand-cyan: #06B6D4;
+  --color-brand-emerald: #10B981;
   
-  --color-cyber-purple-400: #c084fc;
-  --color-cyber-purple-500: #a855f7;
-  --color-cyber-purple-600: #9333ea;
-  
-  --color-neon-cyan-400: #38bdf8;
-  --color-neon-cyan-500: #0ea5e9;
-  
-  --color-charcoal-50: #f8fafc;
-  --color-charcoal-100: #f1f5f9;
-  --color-charcoal-200: #e2e8f0;
-  --color-charcoal-700: #334155;
-  --color-charcoal-800: #1e293b;
-  --color-charcoal-850: #0f172a;
-  --color-charcoal-900: #071b4d;
-  --color-charcoal-950: #050816;
-  --color-charcoal-990: #02040a;
+  --color-text-main: #0F172A;
+  --color-text-muted: #475569;
+  --color-text-subtle: #64748B;
 }
 
 :root {
-  --background: #050816;
-  --foreground: #f8fafc;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #050816;
-  color: #f8fafc;
+  background-color: #F8FAFC;
+  color: #0F172A;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   overflow-x: hidden;
   font-family: var(--font-sans);
@@ -54,73 +37,70 @@ body {
 
 /* Editorial Typography */
 .font-editorial {
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
 }
 
-/* Glassmorphism & Surface Utilities */
-.glass-panel-dark {
-  background: rgba(7, 27, 77, 0.45);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+/* Bright Glassmorphism & Surface Utilities */
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
 }
 
-.glass-panel-elevated {
-  background: rgba(5, 8, 22, 0.75);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(37, 99, 235, 0.2);
-}
-
-.glass-card-hover {
+.glass-card-light {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05), 0 2px 6px -2px rgba(15, 23, 42, 0.03);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.glass-card-hover:hover {
+.glass-card-light:hover {
   transform: translateY(-4px);
-  border-color: rgba(37, 99, 235, 0.45);
-  box-shadow: 0 16px 32px -8px rgba(37, 99, 235, 0.15);
+  border-color: #93C5FD;
+  box-shadow: 0 20px 35px -8px rgba(37, 99, 235, 0.12), 0 4px 12px -2px rgba(37, 99, 235, 0.06);
 }
 
-/* Neon Glows & Gradients */
+/* Vivid Text Gradients */
 .text-gradient-blue {
-  background: linear-gradient(135deg, #ffffff 10%, #60a5fa 55%, #2563eb 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gradient-violet {
-  background: linear-gradient(135deg, #ffffff 10%, #a855f7 50%, #7c3aed 100%);
+  background: linear-gradient(135deg, #1E40AF 0%, #2563EB 50%, #0284C7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-electric {
-  background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #818cf8 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #4F46E5 50%, #7C3AED 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.glow-blue {
-  box-shadow: 0 0 40px -10px rgba(37, 99, 235, 0.4);
+.text-gradient-violet {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #C026D3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.glow-violet {
-  box-shadow: 0 0 40px -10px rgba(124, 58, 237, 0.3);
+/* Glow Beams */
+.glow-blue-subtle {
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.3);
 }
 
-/* Ambient Grid Pattern */
-.bpo-grid-pattern {
-  background-size: 40px 40px;
+.glow-violet-subtle {
+  box-shadow: 0 10px 30px -10px rgba(124, 58, 237, 0.25);
+}
+
+/* Ambient Patterns for Light Canvas */
+.light-mesh-grid {
+  background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
 }
 
-.bpo-dot-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+.light-dot-pattern {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.25) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
 /* Marquee Animation */
@@ -136,7 +116,7 @@ body {
 .animate-marquee {
   display: flex;
   width: 200%;
-  animation: marquee 28s linear infinite;
+  animation: marquee 26s linear infinite;
 }
 
 .animate-marquee:hover {
@@ -154,39 +134,39 @@ body {
 }
 
 .animate-float-subtle {
-  animation: float-subtle 5s ease-in-out infinite;
+  animation: float-subtle 4s ease-in-out infinite;
 }
 
-/* Pulse Glow */
-@keyframes pulse-glow {
+/* Pulse Mesh */
+@keyframes pulse-mesh {
   0%, 100% {
-    opacity: 0.3;
+    opacity: 0.5;
     transform: scale(1);
   }
   50% {
-    opacity: 0.6;
-    transform: scale(1.05);
+    opacity: 0.85;
+    transform: scale(1.06);
   }
 }
 
-.animate-pulse-glow {
-  animation: pulse-glow 6s ease-in-out infinite;
+.animate-pulse-mesh {
+  animation: pulse-mesh 7s ease-in-out infinite;
 }
 
-/* Custom Scrollbar */
+/* Light Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #050816;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #2563EB;
 }

@@ -42,25 +42,25 @@ export default function AIEnabledOperations() {
   ];
 
   return (
-    <section className="py-24 bg-[#050816] text-white relative overflow-hidden border-b border-white/[0.08]">
+    <section className="py-24 bg-white text-slate-900 relative overflow-hidden border-b border-slate-200/80">
       {/* Glow Effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45rem] h-[25rem] bg-violet-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45rem] h-[25rem] bg-violet-400/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-500/10 border border-violet-400/20 text-violet-300 text-xs font-bold uppercase tracking-wider">
-            <Zap className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs font-bold uppercase tracking-wider shadow-xs">
+            <Zap className="w-3.5 h-3.5 text-violet-600" />
             <span>AI-Enhanced Operational Delivery</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-black font-editorial tracking-tight text-white uppercase leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-black font-editorial tracking-tight text-slate-900 uppercase leading-tight">
             AI DOESN&apos;T REPLACE THE TEAM. <br />
             <span className="text-gradient-violet">IT MAKES THE TEAM BETTER.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed">
             {companyConfig.aiEnabledBPO.copy}
           </p>
         </div>
@@ -75,28 +75,28 @@ export default function AIEnabledOperations() {
                 onClick={() => setActiveStep(index)}
                 className={`cursor-pointer rounded-2xl p-4 sm:p-5 border transition-all duration-300 flex flex-col justify-between space-y-3 ${
                   isSelected
-                    ? "bg-[#071B4D] border-violet-400/60 shadow-xl shadow-violet-500/20 scale-[1.03]"
-                    : "bg-white/[0.02] border-white/[0.06] hover:bg-white/[0.05] hover:border-white/15"
+                    ? "bg-white border-violet-600 shadow-xl shadow-violet-500/10 ring-2 ring-violet-500/20 scale-[1.03]"
+                    : "bg-slate-50 border-slate-200/80 hover:bg-white hover:border-violet-300 shadow-xs"
                 }`}
               >
                 <div className="flex items-center justify-between">
                   <span className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded-full ${
-                    isSelected ? "bg-violet-500 text-white" : "bg-white/10 text-slate-400"
+                    isSelected ? "bg-violet-600 text-white" : "bg-slate-200/80 text-slate-600"
                   }`}>
                     STEP {item.step}
                   </span>
-                  <div className="w-8 h-8 rounded-lg bg-white/[0.04] flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-violet-50 border border-violet-100 flex items-center justify-center">
                     {getStepIcon(index)}
                   </div>
                 </div>
 
                 <div className="space-y-1">
                   <h3 className={`text-xs sm:text-sm font-black font-editorial uppercase tracking-tight ${
-                    isSelected ? "text-white" : "text-slate-200"
+                    isSelected ? "text-violet-600" : "text-slate-900"
                   }`}>
                     {item.label}
                   </h3>
-                  <span className="text-[10px] text-slate-400 block font-mono">
+                  <span className="text-[10px] text-slate-500 block font-mono">
                     {item.role}
                   </span>
                 </div>
@@ -106,24 +106,24 @@ export default function AIEnabledOperations() {
         </div>
 
         {/* Detailed Active Step Inspector */}
-        <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-[#071B4D]/60 border border-violet-500/30 backdrop-blur-2xl shadow-2xl relative overflow-hidden">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
+        <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-violet-50/40 border border-violet-200 shadow-lg shadow-violet-900/5 relative overflow-hidden">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-violet-200/60 pb-4">
             <div className="space-y-1">
-              <span className="text-xs font-mono text-violet-400 uppercase tracking-wider block">
+              <span className="text-xs font-mono text-violet-700 uppercase tracking-wider block font-bold">
                 Operational Pipeline Detail &bull; Step {flow[activeStep].step}
               </span>
-              <h4 className="text-xl sm:text-2xl font-black font-editorial text-white uppercase">
+              <h4 className="text-xl sm:text-2xl font-black font-editorial text-slate-900 uppercase">
                 {flow[activeStep].label} &bull; {flow[activeStep].role}
               </h4>
             </div>
 
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-500/15 border border-violet-400/30 text-xs font-mono text-violet-300">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-violet-100 border border-violet-200 text-xs font-mono text-violet-800 font-semibold">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
               <span>Continuous Calibration</span>
             </div>
           </div>
 
-          <p className="text-sm sm:text-base text-slate-200 leading-relaxed pt-4 max-w-3xl">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed pt-4 max-w-3xl">
             {stepDescriptions[activeStep]}
           </p>
         </div>

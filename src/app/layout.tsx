@@ -56,8 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} h-full scroll-smooth dark`}>
-      <body className="font-sans antialiased min-h-screen bg-charcoal-950 text-slate-100 flex flex-col selection:bg-brand-blue-500 selection:text-white relative">
+    <html lang="en" className={`${outfit.variable} h-full scroll-smooth`}>
+      <body className="font-sans antialiased min-h-screen bg-[#F8FAFC] text-slate-900 flex flex-col selection:bg-blue-600 selection:text-white relative">
         <Navbar />
         <main className="flex-grow relative z-10">{children}</main>
         <Footer />
