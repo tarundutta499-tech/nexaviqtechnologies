@@ -25,12 +25,13 @@ interface BookingModalProps {
 }
 
 const SUPPORT_CHANNELS = [
-  "Inbound/Outbound Voice",
-  "Email & Ticketing",
-  "24/7 Live Chat",
-  "IT Helpdesk (L1)",
-  "Back-Office Operations",
-  "AI Quality Platform",
+  "Customer Support (Voice / Omnichannel)",
+  "Chat & Email Support",
+  "Technical Support (L1 & L2)",
+  "Back-Office & Data Processing",
+  "Sales Support & Lead Outreach",
+  "Quality Assurance & Auditing",
+  "AI-Enabled Operations Deployment",
 ];
 
 const TEAM_SIZES = [

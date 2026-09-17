@@ -1,0 +1,73 @@
+"use client";
+
+import React from "react";
+import { companyConfig } from "@/config/company";
+import { TrendingUp, ArrowRight, Layers, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+
+export default function OperationalScale() {
+  const phases = companyConfig.operationalScale.phases;
+
+  return (
+    <section className="py-24 bg-[#050816] text-white relative overflow-hidden border-b border-white/[0.08]">
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[20rem] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Header */}
+        <div className="max-w-3xl mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-400 text-xs font-bold uppercase tracking-wider">
+            <TrendingUp className="w-3.5 h-3.5" />
+            <span>Frictionless Scaling Roadmap</span>
+          </div>
+
+          <h2 className="text-3xl sm:text-5xl font-black font-editorial tracking-tight text-white uppercase leading-tight">
+            START WITH ONE PROCESS. <br />
+            <span className="text-gradient-blue">SCALE WHEN YOU&apos;RE READY.</span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+            {companyConfig.operationalScale.subheadline}
+          </p>
+        </div>
+
+        {/* 5-Phase Horizontal Scale Ribbon */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {phases.map((phase, idx) => (
+            <div
+              key={phase.name}
+              className="rounded-3xl p-5 sm:p-6 bg-[#071B4D]/40 border border-white/10 backdrop-blur-xl flex flex-col justify-between space-y-4 glass-card-hover group"
+            >
+              <div className="space-y-3">
+                <span className="text-[10px] font-mono font-bold px-2.5 py-1 rounded-full bg-blue-500/20 text-blue-300 inline-block">
+                  PHASE 0{idx + 1}
+                </span>
+
+                <h3 className="text-lg font-black font-editorial text-white uppercase tracking-tight group-hover:text-blue-300 transition-colors">
+                  {phase.name}
+                </h3>
+
+                <p className="text-xs text-slate-300 leading-relaxed font-normal">
+                  {phase.desc}
+                </p>
+              </div>
+
+              <div className="pt-3 border-t border-white/5 flex items-center gap-1 text-[11px] font-mono text-emerald-400">
+                <CheckCircle2 className="w-3 h-3 shrink-0" />
+                <span>Zero Lock-in</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Sub-banner */}
+        <div className="mt-10 text-center p-4 rounded-2xl bg-[#071B4D]/30 border border-white/10 max-w-xl mx-auto backdrop-blur-md">
+          <span className="text-xs font-mono text-slate-300">
+            Expand headcount or scope anytime as your customer volume fluctuates.
+          </span>
+        </div>
+
+      </div>
+    </section>
+  );
+}

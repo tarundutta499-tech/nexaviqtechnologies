@@ -3,188 +3,212 @@
 import React, { useState } from "react";
 import { companyConfig } from "@/config/company";
 import {
-  Headset,
-  MailCheck,
-  MessageSquareCode,
+  Headphones,
   Terminal,
-  Layers,
-  BadgeCheck,
+  MessageSquare,
+  FileSpreadsheet,
+  TrendingUp,
+  ShieldCheck,
+  Cpu,
   ArrowRight,
-  Calendar
+  CheckCircle2,
+  Calendar,
+  Sparkles,
+  Zap,
+  Activity
 } from "lucide-react";
-import Link from "next/link";
 import BookingModal from "./BookingModal";
 
 export default function Services() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "support" | "tech" | "backoffice">("all");
+  const [activeServiceIndex, setActiveServiceIndex] = useState(0);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  const getServiceIcon = (id: string) => {
-    switch (id) {
-      case "voice-support":
-        return <Headset className="w-6 h-6 text-neon-cyan-400" />;
-      case "email-support":
-        return <MailCheck className="w-6 h-6 text-neon-cyan-400" />;
-      case "live-chat":
-        return <MessageSquareCode className="w-6 h-6 text-neon-cyan-400" />;
-      case "it-helpdesk":
-        return <Terminal className="w-6 h-6 text-neon-cyan-400" />;
-      case "backoffice-data":
-        return <Layers className="w-6 h-6 text-neon-cyan-400" />;
-      default:
-        return <BadgeCheck className="w-6 h-6 text-neon-cyan-400" />;
+  const services = companyConfig.services;
+  const activeService = services[activeServiceIndex];
+
+  const getServiceIcon = (iconName: string) => {
+    switch (iconName) {
+      case "Headphones": return <Headphones className="w-5 h-5" />;
+      case "Terminal": return <Terminal className="w-5 h-5" />;
+      case "MessageSquare": return <MessageSquare className="w-5 h-5" />;
+      case "FileSpreadsheet": return <FileSpreadsheet className="w-5 h-5" />;
+      case "TrendingUp": return <TrendingUp className="w-5 h-5" />;
+      case "ShieldCheck": return <ShieldCheck className="w-5 h-5" />;
+      case "Cpu": return <Cpu className="w-5 h-5" />;
+      default: return <Headphones className="w-5 h-5" />;
     }
   };
 
-  const filteredServices = activeFilter === "all"
-    ? companyConfig.services
-    : companyConfig.services.filter((s) => s.category === activeFilter);
-
   return (
     <>
-      <section id="services" className="py-24 bg-charcoal-950 border-b border-white/10 font-sans scroll-mt-16 relative overflow-hidden">
-        {/* Ambient Decorative AI Glow */}
-        <div className="absolute inset-0 ai-grid-pattern opacity-40 pointer-events-none" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-brand-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-cyber-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+      <section id="services" className="py-24 bg-[#050816] text-white relative overflow-hidden border-b border-white/[0.08]">
+        {/* Subtle lighting backdrop */}
+        <div className="absolute top-1/3 -left-32 w-[35rem] h-[35rem] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-10 right-0 w-[30rem] h-[30rem] bg-violet-600/10 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
           {/* Section Header */}
-          <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-brand-blue-500/15 rounded-full border border-brand-blue-400/30 backdrop-blur-sm">
-              <span className="text-xs uppercase font-bold tracking-wider text-neon-cyan-400">
-                Services Suite & Delivery Models
-              </span>
+          <div className="max-w-3xl mb-16 space-y-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-400 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Full-Spectrum Operations</span>
             </div>
-            <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
-              Comprehensive Customer Support & Operations
-            </h3>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-              From empathetic customer care and live chat to technical helpdesk and back-office data processing, our dedicated teams operate as seamless extensions of your brand.
+
+            <h2 className="text-3xl sm:text-5xl font-black font-editorial tracking-tight text-white uppercase leading-tight">
+              WHAT WE <br />
+              <span className="text-gradient-blue">OPERATE FOR YOU.</span>
+            </h2>
+
+            <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+              We take ownership of your customer-facing and back-office processes with dedicated specialists, documented governance, and intelligent technology.
             </p>
           </div>
 
-          {/* Filter Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2.5 mb-14">
-            {([
-              { id: "all", label: "All Services" },
-              { id: "support", label: "Customer Care & CX" },
-              { id: "tech", label: "Tech & IT Helpdesk" },
-              { id: "backoffice", label: "Back-Office & Operations" },
-            ] as const).map((f) => (
-              <button
-                key={f.id}
-                onClick={() => setActiveFilter(f.id)}
-                className={`px-4.5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 backdrop-blur-md ${
-                  activeFilter === f.id
-                    ? "bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 text-white shadow-lg shadow-brand-blue-500/25 border border-white/20"
-                    : "bg-charcoal-900/80 text-slate-300 hover:text-white border border-white/10 hover:border-white/20 hover:bg-charcoal-850"
-                }`}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className="bg-charcoal-900/80 border border-white/10 rounded-2xl p-7.5 hover:border-neon-cyan-400/50 hover:shadow-2xl hover:shadow-neon-cyan-500/10 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group scroll-mt-24 backdrop-blur-xl relative overflow-hidden"
-              >
-                {/* Top specular highlight on card */}
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-
-                <div className="space-y-5">
-                  {/* Top Bar: Icon + Category Tag */}
-                  <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 bg-charcoal-950 border border-white/10 rounded-xl flex items-center justify-center group-hover:border-neon-cyan-400/40 group-hover:bg-brand-blue-500/20 transition-all duration-300 shadow-inner shrink-0">
-                      {getServiceIcon(service.id)}
-                    </div>
-                    {service.tag && (
-                      <span className="text-[11px] font-bold px-2.5 py-1 rounded-md bg-brand-blue-500/15 text-brand-blue-300 border border-brand-blue-500/30 uppercase tracking-wide">
-                        {service.tag}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Content */}
-                  <div className="space-y-2">
-                    <h4 className="text-lg font-bold text-white group-hover:text-neon-cyan-400 transition-colors">
-                      {service.title}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                      {service.description}
-                    </p>
-                  </div>
-
-                  <hr className="border-white/10" />
-
-                  {/* Scope Feature List */}
-                  <div className="space-y-3">
-                    <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
-                      Included Capabilities:
-                    </div>
-                    <ul className="space-y-2.5">
-                      {service.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2.5 text-xs text-slate-200">
-                          <span className="w-4 h-4 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shrink-0 mt-0.5">
-                            <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                          </span>
-                          <span className="leading-snug">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-
-                {/* Card Foot */}
-                <div className="pt-5 mt-6 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs font-semibold text-neon-cyan-400">
-                    Dedicated Support Delivery
-                  </span>
-                  <span className="text-[11px] font-medium text-slate-400">
-                    Custom SLAs
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Banner */}
-          <div className="mt-16 bg-gradient-to-r from-charcoal-900 via-brand-blue-950/50 to-charcoal-900 text-white rounded-3xl p-8 sm:p-10 border border-brand-blue-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl backdrop-blur-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-neon-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+          {/* Interactive Presentation Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            <div className="space-y-2 text-center md:text-left relative z-10">
-              <h4 className="text-xl sm:text-2xl font-bold text-white">
-                Looking for a Custom Support Architecture?
-              </h4>
-              <p className="text-xs sm:text-sm text-slate-300 max-w-xl leading-relaxed">
-                We design dedicated teams with custom shift hours, bilingual agents, and tailored escalation protocols.
-              </p>
+            {/* Left Column: Vertical 01 - 07 Service Navigation List */}
+            <div className="lg:col-span-5 space-y-2">
+              {services.map((service, index) => {
+                const isActive = activeServiceIndex === index;
+                return (
+                  <button
+                    key={service.id}
+                    type="button"
+                    onClick={() => setActiveServiceIndex(index)}
+                    className={`w-full text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group ${
+                      isActive
+                        ? "bg-[#071B4D]/80 border-blue-500/50 shadow-xl shadow-blue-500/15"
+                        : "bg-white/[0.02] border-white/[0.06] hover:bg-white/[0.05] hover:border-white/15"
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className={`font-mono text-base sm:text-lg font-black transition-colors ${
+                        isActive ? "text-blue-400" : "text-slate-500 group-hover:text-slate-300"
+                      }`}>
+                        {service.num}
+                      </span>
+
+                      <div>
+                        <h3 className={`text-sm sm:text-base font-bold uppercase tracking-tight transition-colors ${
+                          isActive ? "text-white" : "text-slate-300 group-hover:text-white"
+                        }`}>
+                          {service.title}
+                        </h3>
+                        <span className="text-[11px] text-slate-400 block font-mono">
+                          {service.tag}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all ${
+                      isActive
+                        ? "bg-blue-600 text-white shadow-md shadow-blue-500/30"
+                        : "bg-white/[0.04] text-slate-400 group-hover:text-white group-hover:bg-white/[0.08]"
+                    }`}>
+                      {getServiceIcon(service.iconName)}
+                    </div>
+                  </button>
+                );
+              })}
             </div>
-            <div className="flex flex-col sm:flex-row gap-3.5 shrink-0 relative z-10">
-              <button
-                type="button"
-                onClick={() => setIsBookingOpen(true)}
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 hover:from-brand-blue-500 hover:to-brand-blue-400 text-white font-bold text-xs transition-all shadow-lg shadow-brand-blue-500/25 border border-white/15"
-              >
-                <Calendar className="w-3.5 h-3.5 text-neon-cyan-300" />
-                <span>Book 15-Min Strategy Call</span>
-              </button>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-1.5 px-5 py-3.5 rounded-xl bg-charcoal-850 hover:bg-charcoal-800 text-white border border-white/15 font-bold text-xs transition-all"
-              >
-                <span>Request Proposal</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+
+            {/* Right Column: Active Service Detailed Spotlight & Interactive Telemetry Panel */}
+            <div className="lg:col-span-7 sticky top-28">
+              <div className="rounded-3xl bg-[#071B4D]/50 border border-white/15 backdrop-blur-2xl p-6 sm:p-8 space-y-8 shadow-2xl relative overflow-hidden">
+                
+                {/* Background Watermark Number */}
+                <div className="absolute top-2 right-6 text-8xl sm:text-9xl font-black font-mono text-white/[0.03] select-none pointer-events-none">
+                  {activeService.num}
+                </div>
+
+                {/* Service Header */}
+                <div className="space-y-4 relative z-10">
+                  <div className="flex flex-wrap items-center justify-between gap-3">
+                    <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-blue-500/15 text-blue-300 border border-blue-400/30">
+                      SERVICE {activeService.num} &bull; {activeService.tag}
+                    </span>
+
+                    <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.05] border border-white/10 text-xs font-mono text-slate-300">
+                      <span className="text-slate-400">{activeService.metricLabel}:</span>
+                      <span className="font-bold text-emerald-400">{activeService.metricValue}</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl sm:text-3xl font-black font-editorial text-white uppercase tracking-tight">
+                    {activeService.title}
+                  </h3>
+
+                  <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                    {activeService.shortDesc}
+                  </p>
+                </div>
+
+                {/* Scope & Capabilities Checklist */}
+                <div className="space-y-3 relative z-10 pt-2 border-t border-white/10">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-blue-400 font-mono flex items-center gap-1.5">
+                    <Activity className="w-3.5 h-3.5" />
+                    Operational Scope &amp; Deliverables
+                  </h4>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {activeService.details.map((detail, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-2.5 p-3 rounded-xl bg-[#050816]/70 border border-white/[0.06] text-xs text-slate-200"
+                      >
+                        <CheckCircle2 className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                        <span className="leading-snug">{detail}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Simulated Telemetry / Tech Stack Bar */}
+                <div className="p-4 rounded-2xl bg-[#050816]/90 border border-blue-500/20 relative z-10 space-y-3">
+                  <div className="flex items-center justify-between text-xs font-mono text-slate-400">
+                    <span className="flex items-center gap-2 text-white font-bold">
+                      <Zap className="w-3.5 h-3.5 text-blue-400" />
+                      Deployment Model
+                    </span>
+                    <span className="text-emerald-400">Dedicated Pod + SLA</span>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 text-[11px] font-mono">
+                    <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-slate-300">
+                      CRM Native Integration
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-slate-300">
+                      Supervised Shift Leads
+                    </span>
+                    <span className="px-2.5 py-1 rounded-lg bg-white/[0.05] border border-white/10 text-slate-300">
+                      Weekly QA Calibration
+                    </span>
+                  </div>
+                </div>
+
+                {/* Service Bottom CTA */}
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2 relative z-10">
+                  <span className="text-xs text-slate-400">
+                    Need a custom operational pod for this service?
+                  </span>
+
+                  <button
+                    type="button"
+                    onClick={() => setIsBookingOpen(true)}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-lg shadow-blue-500/25 transition-all"
+                  >
+                    <span>Request Service Proposal</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+
+              </div>
             </div>
+
           </div>
+
         </div>
       </section>
 

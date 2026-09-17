@@ -1,20 +1,445 @@
 export const companyConfig = {
-  name: "Nexaviq Technologies",
-  tagline: "Exceptional Customer Support. Delivered by Experts.",
-  description: "We provide next-generation Business Process Outsourcing (BPO) and omnichannel Customer Experience (CX) solutions—scaling dedicated teams across 24/7 Live Chat, Inbound/Outbound Support, Email Helpdesk, and Back-Office Operations. Powered by Lean Six Sigma QA standards and AI-driven quality monitoring, we partner with high-growth brands and global enterprises across the US, UK, Canada, Europe, and APAC.",
+  name: "NEXAVIQ TECHNOLOGIES PVT. LTD.",
+  shortName: "Nexaviq Technologies",
+  tagline: "Customer Operations, Built to Scale.",
+  headlineAlt: "We Run the Operations Behind Better Customer Experiences.",
+  description: "Nexaviq Technologies helps businesses scale customer experience and business operations through skilled teams, intelligent processes and AI-enabled delivery.",
   calendlyUrl: "https://calendly.com/nexaviq/discovery-call",
-  founder: {
-    name: "Founder & Director",
-    experience: "12+ years of hands-on expertise across Customer Service Operations, Service Desk Management, Quality Assurance, Team Leadership, Process Improvement, Lean Six Sigma, Root Cause Analysis, Performance Management, SLA Management, and Customer Experience.",
-    statement: "I founded Nexaviq on a single principle: customer support shouldn't feel outsourced; it should feel like an extension of your own culture, driven by strict standards and continuous operational excellence."
-  },
+  
   contact: {
     email: "supporthelp@nexaviq.com",
     phone: "+91 96641 43424",
     whatsapp: "https://wa.me/919664143424",
     address: "Jaitsar, Distt Sri Ganganagar, Rajasthan, 335702, India",
-    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55685.2777821683!2d73.61366115820313!3d29.28919690000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391583d7a8d5e89d%3A0x63ebefc0beeece01!2sJaitsar%2C%20Rajasthan%20335702!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55685.2777821683!2d73.61366115820313!3d29.28919690000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391583d7a8d5e89d%3A0x63ebefc0beeece01!2sJaitsar%2C%20Rajasthan%20335702!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin",
   },
+
+  trustSection: {
+    headline: "MORE THAN A VENDOR. AN EXTENSION OF YOUR TEAM.",
+    copy: "From customer conversations to back-office workflows, Nexaviq provides the people, processes and technology needed to run critical business operations at scale.",
+    marquee: [
+      "CUSTOMER EXPERIENCE",
+      "VOICE SUPPORT",
+      "CHAT SUPPORT",
+      "TECHNICAL SUPPORT",
+      "BACK OFFICE",
+      "QUALITY ASSURANCE",
+      "SALES SUPPORT",
+      "AI-ENABLED OPERATIONS"
+    ]
+  },
+
+  services: [
+    {
+      num: "01",
+      id: "customer-support",
+      title: "CUSTOMER SUPPORT",
+      shortDesc: "Voice, chat, email and omnichannel customer support delivered by trained teams aligned with your brand and processes.",
+      details: [
+        "Inbound voice customer care with first-contact resolution focus",
+        "Omnichannel queue triage & unified customer context",
+        "Strict SLA adherence tailored to your brand standards",
+        "Empathetic, brand-aligned communication protocols"
+      ],
+      tag: "Omnichannel Support",
+      metricLabel: "FCR Benchmark Target",
+      metricValue: "88%+",
+      iconName: "Headphones"
+    },
+    {
+      num: "02",
+      id: "technical-support",
+      title: "TECHNICAL SUPPORT",
+      shortDesc: "Tier 1 and Tier 2 technical support, troubleshooting, ticket handling and escalation management.",
+      details: [
+        "L1/L2 application, SaaS, and hardware troubleshooting",
+        "Structured ticket classification & escalation workflows",
+        "Bug reproduction, user permissions, and account recovery",
+        "Continuous knowledge base and SOP documentation"
+      ],
+      tag: "Tier 1 & Tier 2 Helpdesk",
+      metricLabel: "Avg Resolution Time",
+      metricValue: "< 4 Hours",
+      iconName: "Terminal"
+    },
+    {
+      num: "03",
+      id: "chat-email",
+      title: "CHAT & EMAIL SUPPORT",
+      shortDesc: "Fast, accurate and consistent digital customer support across chat and email channels.",
+      details: [
+        "Sub-60 second real-time live chat response targets",
+        "High-volume asynchronous email ticket resolution",
+        "Proactive web chat engagement & cart support",
+        "Multichannel coverage across Zendesk, Gorgias & Freshdesk"
+      ],
+      tag: "Digital CX Support",
+      metricLabel: "Initial Chat Response",
+      metricValue: "< 60 Sec",
+      iconName: "MessageSquare"
+    },
+    {
+      num: "04",
+      id: "back-office",
+      title: "BACK-OFFICE OPERATIONS",
+      shortDesc: "Data processing, order management, documentation, verification, transaction processing and administrative workflows.",
+      details: [
+        "High-accuracy data entry, catalog cleansing & validation",
+        "KYC document checks, account verification & review",
+        "Order processing, invoice reconciliation & billing support",
+        "Vendor coordination and repetitive administrative operations"
+      ],
+      tag: "Process Execution",
+      metricLabel: "Data Accuracy Target",
+      metricValue: "99.8%",
+      iconName: "FileSpreadsheet"
+    },
+    {
+      num: "05",
+      id: "sales-support",
+      title: "SALES SUPPORT",
+      shortDesc: "Lead qualification, customer outreach, appointment setting, inside sales support and follow-up operations.",
+      details: [
+        "Inbound lead qualification (BANT/custom framework)",
+        "Outbound pipeline follow-ups and discovery call scheduling",
+        "CRM data enrichment and sales pipeline hygiene",
+        "Inside sales operational support for high-velocity teams"
+      ],
+      tag: "Pipeline Acceleration",
+      metricLabel: "Lead Response Time",
+      metricValue: "< 5 Mins",
+      iconName: "TrendingUp"
+    },
+    {
+      num: "06",
+      id: "quality-assurance",
+      title: "QUALITY ASSURANCE",
+      shortDesc: "Structured quality monitoring, scorecards, coaching and performance governance.",
+      details: [
+        "Comprehensive interaction auditing across all channels",
+        "Custom rubric & scorecard calibration with client leadership",
+        "Targeted 1-on-1 agent coaching & root cause failure analysis",
+        "Transparent governance dashboards & weekly QA calibration"
+      ],
+      tag: "Process Governance",
+      metricLabel: "Target QA Score",
+      metricValue: "98%+",
+      iconName: "ShieldCheck"
+    },
+    {
+      num: "07",
+      id: "ai-enabled-ops",
+      title: "AI-ENABLED OPERATIONS",
+      shortDesc: "Use AI, automation and analytics to improve agent productivity, quality and operational visibility.",
+      details: [
+        "AI-assisted live agent co-pilots and smart suggested replies",
+        "Automated interaction summaries & zero after-call work (ACW)",
+        "Speech analytics, sentiment detection & compliance checks",
+        "Intelligent ticket routing and anomaly detection"
+      ],
+      tag: "Technology Advantage",
+      metricLabel: "Operational Multiplier",
+      metricValue: "AI + Human",
+      iconName: "Cpu"
+    }
+  ],
+
+  humanTechnology: {
+    headline: "PEOPLE POWER THE EXPERIENCE. TECHNOLOGY MULTIPLIES IT.",
+    peopleTitle: "PEOPLE",
+    peopleTraits: [
+      { name: "Empathy", desc: "Genuine human understanding during stressful interactions" },
+      { name: "Communication", desc: "Clear, culturally aligned, brand-faithful dialogue" },
+      { name: "Judgment", desc: "Nuanced decision-making for complex edge cases" },
+      { name: "Problem Solving", desc: "Creative resolution beyond scripted canned answers" },
+      { name: "Customer Understanding", desc: "Advocating for the customer with emotional intelligence" }
+    ],
+    techTitle: "TECHNOLOGY",
+    techTraits: [
+      { name: "AI & Co-Pilots", desc: "Real-time context and instant knowledge retrieval" },
+      { name: "Automation", desc: "Automated routing, tagging, and after-call documentation" },
+      { name: "Analytics", desc: "Continuous sentiment, keyword, and SLA telemetry" },
+      { name: "Workflow Intelligence", desc: "Smart escalation paths and workload balancing" },
+      { name: "Real-time Insights", desc: "Immediate visibility into quality and operational bottlenecks" }
+    ],
+    centerBadge: "NEXAVIQ",
+    centerTagline: "Better operations. Better experiences."
+  },
+
+  bpoCapabilities: {
+    headline: "FROM ONE PROCESS TO AN ENTIRE OPERATION.",
+    subheadline: "Whether you need a specialized team for a single bottleneck or an end-to-end operational partner, Nexaviq scales flexibly alongside your roadmap.",
+    stages: [
+      {
+        step: "01",
+        name: "ONE TEAM",
+        desc: "A focused, trained team of dedicated specialists executing with precision."
+      },
+      {
+        step: "02",
+        name: "ONE PROCESS",
+        desc: "Mastering a critical operational workflow (e.g. Tier-1 Chat or KYC Intake)."
+      },
+      {
+        step: "03",
+        name: "MULTIPLE PROCESSES",
+        desc: "Expanding to support cross-functional needs: CX, Back-Office & QA."
+      },
+      {
+        step: "04",
+        name: "END-TO-END OPERATIONS",
+        desc: "Complete operational ownership with SLA governance and continuous improvement."
+      }
+    ]
+  },
+
+  industries: [
+    {
+      id: "ecommerce",
+      name: "E-Commerce",
+      tagline: "High-volume customer care, order tracking, and returns management.",
+      services: [
+        "24/7 Omnichannel Customer Support",
+        "Order Management & Tracking",
+        "Returns, Exchanges & Refunds",
+        "Live Pre-Sales Chat Support",
+        "Back-Office Catalog Processing"
+      ],
+      metrics: "Sub-60s Chat Response • High Order Accuracy"
+    },
+    {
+      id: "fintech",
+      name: "Fintech",
+      tagline: "Secure, compliant account verification and transaction support.",
+      services: [
+        "KYC Document Verification",
+        "Transaction Dispute Triage",
+        "Fraud Review Assistance",
+        "Tier-1 Account & App Support",
+        "Compliance & Security Governance"
+      ],
+      metrics: "Strict Security NDAs • Rigorous Data Minimization"
+    },
+    {
+      id: "saas",
+      name: "SaaS & Technology",
+      tagline: "Technical troubleshooting, onboarding, and product helpdesk.",
+      services: [
+        "L1 / L2 Technical Support",
+        "User Onboarding & Setup Guidance",
+        "Bug Reproduction & Escalation",
+        "Real-Time Web Chat Support",
+        "Knowledge Base Documentation"
+      ],
+      metrics: "Fast Ticket Triage • SLA-Driven Resolution"
+    },
+    {
+      id: "healthcare",
+      name: "Healthcare",
+      tagline: "Empathetic patient coordination and administrative intake.",
+      services: [
+        "Patient Appointment Scheduling",
+        "Inbound Inquiry & Helpline Triage",
+        "Medical Records & Intake Data Processing",
+        "Billing & Insurance Query Assistance",
+        "Confidential Documentation Handling"
+      ],
+      metrics: "Empathetic Communication • Zero-Trust Security"
+    },
+    {
+      id: "travel",
+      name: "Travel & Hospitality",
+      tagline: "Dynamic booking changes, reservation help, and guest care.",
+      services: [
+        "Reservation & Booking Modifications",
+        "24/7 Itinerary & Cancellation Assistance",
+        "Omnichannel Guest Experience",
+        "Loyalty Program Support",
+        "Disruption & Emergency Handling"
+      ],
+      metrics: "24/7 Global Coverage • High Empathy Resolution"
+    },
+    {
+      id: "logistics",
+      name: "Logistics & Supply Chain",
+      tagline: "Real-time dispatch coordination, package tracing, and exceptions.",
+      services: [
+        "Live Shipment Tracking Inquiries",
+        "Driver & Dispatch Operational Coordination",
+        "Delivery Exception & Claims Handling",
+        "Warehouse Order Processing",
+        "Vendor Communication Management"
+      ],
+      metrics: "Real-Time Tracking • Operational Uptime"
+    },
+    {
+      id: "mobility",
+      name: "Mobility",
+      tagline: "Fast-paced driver, rider, and fleet support operations.",
+      services: [
+        "Driver & Rider App Support",
+        "Incident Intake & Escalation",
+        "Identity Verification & Onboarding",
+        "Billing & Fare Adjustments",
+        "Fleet Operational Telemetry Support"
+      ],
+      metrics: "Rapid Ticket Triage • Multichannel SLA"
+    },
+    {
+      id: "telecom",
+      name: "Telecommunications",
+      tagline: "Billing clarity, service activation, and retention workflows.",
+      services: [
+        "Billing & Plan Inquiries",
+        "Service Provisioning & Activation Help",
+        "Customer Retention & Winback Support",
+        "Network Status Communication",
+        "Hardware & SIM Dispatch Support"
+      ],
+      metrics: "High First-Contact Resolution • Proactive Support"
+    },
+    {
+      id: "retail",
+      name: "Retail",
+      tagline: "Seamless omnichannel support bridging store and digital shopping.",
+      services: [
+        "Store & Online Support Integration",
+        "Loyalty & Rewards Administration",
+        "Warranty & Product Replacement Claims",
+        "Product Inquiries & Availability",
+        "Post-Purchase Follow-up Operations"
+      ],
+      metrics: "Brand-Aligned Tone • High CSAT Scores"
+    },
+    {
+      id: "consumer-services",
+      name: "Consumer Services",
+      tagline: "Scalable subscription care and responsive member assistance.",
+      services: [
+        "Membership & Subscription Management",
+        "Customer Feedback & Escalation Triage",
+        "Billing & Account Settings Assistance",
+        "Service Inquiries & Booking Coordination",
+        "Proactive Customer Retention Outreach"
+      ],
+      metrics: "Continuous QA Auditing • Reduced Churn"
+    }
+  ],
+
+  whyNexaviq: {
+    headline: "WHY BUSINESSES OUTSOURCE WITH NEXAVIQ.",
+    principles: [
+      {
+        num: "01",
+        title: "PEOPLE",
+        desc: "Trained, dedicated teams aligned with your processes, tone of voice, and brand culture."
+      },
+      {
+        num: "02",
+        title: "PROCESS",
+        desc: "Documented standard operating procedures, robust governance, and measurable SLA commitments."
+      },
+      {
+        num: "03",
+        title: "TECHNOLOGY",
+        desc: "AI, automation, and real-time analytics integrated into everyday operations to multiply productivity."
+      },
+      {
+        num: "04",
+        title: "QUALITY",
+        desc: "Continuous interaction monitoring, weekly calibration, and structured operational coaching."
+      }
+    ]
+  },
+
+  aiEnabledBPO: {
+    headline: "AI DOESN'T REPLACE THE TEAM. IT MAKES THE TEAM BETTER.",
+    copy: "Our operations are enhanced with AI-powered quality monitoring, conversation analytics, automated summaries, workflow automation and performance intelligence.",
+    flowSteps: [
+      { step: "01", label: "CUSTOMER", role: "Omnichannel Interaction" },
+      { step: "02", label: "AGENT", role: "Empathetic Human Care" },
+      { step: "03", label: "AI ASSISTANCE", role: "Real-Time Context & Suggestions" },
+      { step: "04", label: "QUALITY INTELLIGENCE", role: "100% Interaction Auditing" },
+      { step: "05", label: "MANAGER", role: "Targeted Coaching & Calibration" },
+      { step: "06", label: "CONTINUOUS IMPROVEMENT", role: "Measurable Operational Lift" }
+    ]
+  },
+
+  qualitySection: {
+    headline: "QUALITY YOU CAN SEE. PERFORMANCE YOU CAN MEASURE.",
+    subheadline: "We manage operations against clear, verifiable standards. Below is a demonstrative look at our core operational governance framework:",
+    illustrativeMetrics: [
+      { label: "Quality Audit Score", value: "98.4%", target: "Target ≥ 95%", note: "Multi-point rubric evaluation" },
+      { label: "Customer Satisfaction", value: "94.8%", target: "Target ≥ 90%", note: "Post-interaction survey CSAT" },
+      { label: "First Contact Resolution", value: "86.2%", target: "Target ≥ 80%", note: "Zero unnecessary transfers" },
+      { label: "SLA Compliance", value: "99.2%", target: "Target ≥ 98%", note: "Strict response time adherence" },
+      { label: "Average Handle Time", value: "Optimized", target: "Calibrated", note: "Balanced for quality & depth" },
+      { label: "Escalation Rate", value: "< 2.5%", target: "Target ≤ 3%", note: "Proactive resolution on L1/L2" }
+    ]
+  },
+
+  howWeWork: {
+    headline: "HOW WE WORK",
+    subheadline: "A disciplined, four-stage framework designed for fast, seamless operational transitions.",
+    steps: [
+      {
+        num: "01",
+        name: "DISCOVER",
+        desc: "Understand your business, customer personas, existing workflows, tools, and operational objectives."
+      },
+      {
+        num: "02",
+        name: "DESIGN",
+        desc: "Build the operating model, team staffing structure, SOPs, governance scorecards, and tech stack integration."
+      },
+      {
+        num: "03",
+        name: "DEPLOY",
+        desc: "Recruit, thoroughly train, configure secure workstations, test workflows, and launch the operation."
+      },
+      {
+        num: "04",
+        name: "OPTIMIZE",
+        desc: "Measure performance daily, conduct QA audits, eliminate process bottlenecks, and scale with your growth."
+      }
+    ]
+  },
+
+  operationalScale: {
+    headline: "START WITH ONE PROCESS. SCALE WHEN YOU'RE READY.",
+    subheadline: "Our operational model is built to support your company at every phase of growth without rigid commitments.",
+    phases: [
+      { name: "Pilot", desc: "Test workflows with a dedicated initial pod" },
+      { name: "Dedicated Team", desc: "Full-time dedicated specialists trained on your brand" },
+      { name: "Multi-Channel", desc: "Omnichannel coverage across voice, chat & email" },
+      { name: "Multi-Process", desc: "Expand to back-office, technical support & QA" },
+      { name: "Strategic Operations Partner", desc: "End-to-end operational governance and continuous improvement" }
+    ]
+  },
+
+  globalDelivery: {
+    headline: "BUILT IN INDIA. READY FOR GLOBAL OPERATIONS.",
+    copy: "From India, Nexaviq delivers customer and business process operations designed around the needs of growing companies and global teams.",
+    regions: [
+      { name: "North America", timezone: "EST / CST / PST", focus: "Customer Support & Back-Office" },
+      { name: "Europe & UK", timezone: "GMT / CET", focus: "Omnichannel Care & Tech Support" },
+      { name: "Middle East", timezone: "GST / AST", focus: "Operations & Process Execution" },
+      { name: "Southeast Asia", timezone: "SGT / AEST", focus: "Digital CX & Data Processing" }
+    ]
+  },
+
+  about: {
+    headline: "WE'RE BUILDING A BETTER WAY TO OUTSOURCE.",
+    copy: "Nexaviq Technologies combines people, process and technology to help businesses build reliable, scalable and customer-focused operations. We partner with leaders who value operational excellence, transparent governance, and human-centered support."
+  },
+
+  ctaSection: {
+    headline: "LET'S BUILD YOUR NEXT OPERATION.",
+    copy: "Tell us what you're trying to improve, scale or outsource. Our team will work with you to design the right operating model.",
+    primaryCTA: "Talk to Our Team",
+    secondaryCTA: "Request a Proposal"
+  },
+
   techStack: [
     { name: "Zendesk", category: "Helpdesk & Ticketing", tag: "Certified Suite" },
     { name: "Gorgias", category: "E-commerce CX", tag: "Shopify Specialist" },
@@ -27,6 +452,67 @@ export const companyConfig = {
     { name: "Jira Service", category: "Technical Helpdesk", tag: "Issue Tracking" },
     { name: "Slack", category: "Internal Comms", tag: "Client Handoff" },
   ],
+
+  faqs: [
+    {
+      q: "What operations and services do you provide?",
+      a: "We provide multichannel Customer Support (Voice, Live Chat, Email), Technical Helpdesk (L1 & L2), Back-Office Operations, Sales Support, Quality Assurance & Auditing, and AI-Enabled Operations delivery."
+    },
+    {
+      q: "How does the dedicated team staffing model work?",
+      a: "Our specialists work exclusively on your business processes. We recruit, train, and manage dedicated pods that master your SOPs, tone of voice, and software tools without shared-agent context switching."
+    },
+    {
+      q: "Can you operate across global time zones (US, UK, Europe, APAC)?",
+      a: "Yes. From our delivery facility in India, we operate 24/7/365 to provide continuous shift coverage across North American (EST/CST/PST), European (GMT/CET), Middle Eastern (GST), and APAC time zones."
+    },
+    {
+      q: "How quickly can an operational team be deployed?",
+      a: "Standard dedicated pods are recruited, trained against your documented SOPs, and launched within 10 to 14 business days, backed by a structured hypercare period."
+    },
+    {
+      q: "How do you enforce security and confidentiality?",
+      a: "We operate under enterprise zero-trust standards: workstation isolation (zero portable USB storage), 24/7 CCTV facility surveillance, role-based CRM access controls, and legally enforceable NDAs and DPAs before knowledge transfer."
+    },
+    {
+      q: "How does AI enhance your BPO operations?",
+      a: "We utilize AI as a real-time agent co-pilot, for automated post-interaction summaries, and 100% QA audit coverage. AI doesn't replace the human specialist; it multiplies their accuracy, speed, and consistency."
+    }
+  ],
+
+  securityFramework: [
+    {
+      badge: "Access Governance",
+      title: "Role-Based Access & Audit Logs",
+      description: "Least-privilege access controls, multi-factor authentication, and continuous session auditing inside your native helpdesk environment.",
+      iconName: "ShieldCheck"
+    },
+    {
+      badge: "Data Privacy",
+      title: "GDPR & CCPA Best Practices",
+      description: "Strict data minimization protocols, right-to-erasure workflows, and signed Data Protection Agreements (DPAs) with every enterprise client.",
+      iconName: "Lock"
+    },
+    {
+      badge: "Payment Security",
+      title: "Zero Plaintext Payment Storage",
+      description: "Secure handling of billing inquiries exclusively through your tokenized CRM gateways with zero local cardholder data storage.",
+      iconName: "CreditCard"
+    },
+    {
+      badge: "Endpoint Security",
+      title: "Workstation Isolation & 2FA",
+      description: "Hardware 2-factor authentication, secure VPN connections, zero-USB file transfer blocking, and strict device management policies.",
+      iconName: "Server"
+    },
+    {
+      badge: "Legal Protection",
+      title: "Enforceable Binding NDAs",
+      description: "Every agent and supervisor signs comprehensive, legally binding non-disclosure agreements and undergoes background verification.",
+      iconName: "FileCheck"
+    }
+  ],
+
   infrastructure: [
     {
       id: "ops-floor",
@@ -75,190 +561,6 @@ export const companyConfig = {
         "Documented Disaster Recovery (DR) and business continuity plans",
         "Regularly tested failover drills to guarantee 99.9% uptime"
       ]
-    }
-  ],
-  securityFramework: [
-    {
-      badge: "Access Governance",
-      title: "Role-Based Access & Audit Logs",
-      description: "Least-privilege access controls, multi-factor authentication, and continuous session auditing inside your native helpdesk environment.",
-      iconName: "ShieldCheck"
-    },
-    {
-      badge: "Data Privacy",
-      title: "GDPR & CCPA Best Practices",
-      description: "Strict data minimization protocols, right-to-erasure workflows, and signed Data Protection Agreements (DPAs) with every enterprise client.",
-      iconName: "Lock"
-    },
-    {
-      badge: "Payment Security",
-      title: "Zero Plaintext Payment Storage",
-      description: "Secure handling of billing inquiries exclusively through your tokenized CRM gateways with zero local cardholder data storage.",
-      iconName: "CreditCard"
-    },
-    {
-      badge: "Endpoint Security",
-      title: "Workstation Isolation & 2FA",
-      description: "Hardware 2-factor authentication, secure VPN connections, zero-USB file transfer blocking, and strict device management policies.",
-      iconName: "Server"
-    },
-    {
-      badge: "Legal Protection",
-      title: "Enforceable Binding NDAs",
-      description: "Every agent and supervisor signs comprehensive, legally binding non-disclosure agreements and undergoes background verification.",
-      iconName: "FileCheck"
-    }
-  ],
-  services: [
-    {
-      id: "voice-support",
-      category: "support",
-      categoryLabel: "Customer Care & CX",
-      title: "Customer Support (Voice & Inbound/Outbound)",
-      description: "Empathetic, clear, and professional voice support. We manage inbound inquiries, order issues, and proactive customer follow-ups.",
-      features: [
-        "Inbound triage & first-contact resolution",
-        "Outbound customer follow-ups, retention, and verification check-ins",
-        "Call recording audits & weekly speech analytics coaching",
-        "Tailored SLA response and queue holding time targets"
-      ],
-      tag: "Inbound / Outbound Voice"
-    },
-    {
-      id: "email-support",
-      category: "support",
-      categoryLabel: "Customer Care & CX",
-      title: "Email Support & Ticketing",
-      description: "Structured, on-brand written communication managed against strict response-time and resolution SLAs across Zendesk, Freshdesk, and Gorgias.",
-      features: [
-        "High-volume inbound ticket categorization and resolution",
-        "Order management, returns, exchanges, and warranty handling",
-        "Escalated case ownership and multi-tier investigation",
-        "Knowledge base contribution and template standardization"
-      ],
-      tag: "Async Helpdesk"
-    },
-    {
-      id: "live-chat",
-      category: "support",
-      categoryLabel: "Customer Care & CX",
-      title: "Live Chat Support & Sales Assistance",
-      description: "Instant real-time digital support that boosts checkout conversions and resolves customer inquiries with under 60-second response times.",
-      features: [
-        "Simultaneous live chat handling with high accuracy",
-        "Real-time product guidance & checkout abandonment assistance",
-        "CRM contact capturing and lead qualification",
-        "24/7 or custom peak-hours chat queue coverage"
-      ],
-      tag: "Real-Time Chat"
-    },
-    {
-      id: "it-helpdesk",
-      category: "tech",
-      categoryLabel: "Tech & IT Helpdesk",
-      title: "IT & Technical Helpdesk Support (L1)",
-      description: "Patient, technically competent support engineers acting as the first point of contact for user issues, account permissions, and system access.",
-      features: [
-        "Level 1 user support for internal applications and SaaS tools",
-        "Account provisioning, password resets, and role permissions",
-        "Structured ticket routing and escalation management",
-        "Hardware & software basic diagnostic troubleshooting"
-      ],
-      tag: "Technical Helpdesk"
-    },
-    {
-      id: "backoffice-data",
-      category: "backoffice",
-      categoryLabel: "Back-Office & Operations",
-      title: "Back-Office & Data Operations",
-      description: "Accurate, dependable operational and data processing that frees your core staff to focus on strategic product development and revenue.",
-      features: [
-        "Accurate data entry, product catalog cleansing, and migration",
-        "Document processing, compliance verification, and KYC checks",
-        "High-volume invoice, billing, and transaction processing",
-        "Inventory tracking, vendor coordination, and routine admin tasks"
-      ],
-      tag: "Back-Office Processing"
-    }
-  ],
-  qaFramework: {
-    title: "Our Quality Assurance Pillars",
-    subtitle: "We don't just answer queries — we measure, audit, and improve every single interaction using structured performance scorecards.",
-    pillars: [
-      {
-        title: "Performance Scorecards",
-        description: "Weekly audits of random support tickets focusing on tone of voice, greeting standards, accuracy of resolution, and documentation standards."
-      },
-      {
-        title: "Regular Coaching & Feedback",
-        description: "1-on-1 feedback sessions based on actual interactions. We identify gaps, roleplay common issues, and reinforce best practice techniques."
-      },
-      {
-        title: "Root Cause Analysis (RCA)",
-        description: "When SLA failures or negative CSAT events occur, we conduct formal root cause analyses to implement permanent corrective actions."
-      },
-      {
-        title: "CSAT & SLA Real-time Monitoring",
-        description: "We use live analytics dashboards to monitor wait times, queue lengths, average handling time, and customer feedback trends."
-      }
-    ]
-  },
-  process: [
-    { step: 1, name: "Schedule a Consultation", desc: "Submit your details or connect on WhatsApp to outline your channels, tools, and support hours." },
-    { step: 2, name: "Discovery & Scope", desc: "We connect to analyze your typical ticket volumes, tools (Zendesk, etc.), and response time windows." },
-    { step: 3, name: "Custom Solution & SLA", desc: "We design a custom proposal defining your dedicated agent headcount, coverage times, and SLA KPIs." },
-    { step: 4, name: "Agent Training & Setup", desc: "We onboard and train dedicated agents using your exact product guides, compliance rules, and mock scenarios." },
-    { step: 5, name: "Go-Live & Hypercare", desc: "Launch support with on-site supervisor coverage to handle early escalations and stabilize chat/email queues." },
-    { step: 6, name: "Get Continuous Help", desc: "Access weekly QA dashboards, root cause analyses, updates to knowledge bases, and scale your desk as you grow." }
-  ],
-  industries: [
-    "SaaS & Software",
-    "E-commerce & Retail",
-    "Technology & Hardware",
-    "Healthcare & Biotech",
-    "Travel & Hospitality",
-    "Education & EdTech",
-    "Financial Services",
-    "Telecommunications",
-    "Professional Services"
-  ],
-  benefits: [
-    { title: "Reduced Operational Costs", desc: "Save up to 50% compared to onshore staffing while maintaining superior resolution standards." },
-    { title: "Dedicated Support Teams", desc: "Agents work exclusively on your brand, developing deep domain knowledge and seamless customer rapport." },
-    { title: "Improved CSAT & NPS", desc: "Professional, empathetic agents deliver faster resolutions, leading to happier customers." },
-    { title: "SLA Targets Tailored To You", desc: "We design response-time and resolution-rate SLAs that align with your exact business objectives." },
-    { title: "Flexible Scaling", desc: "Scale your team up during seasonal spikes (e.g. holidays) and down during quieter periods." },
-    { title: "Lean Six Sigma Leadership", desc: "Managed by operations veterans utilizing process improvement methodologies to resolve system pain points." },
-    { title: "Transparent Reporting", desc: "Get detailed weekly dashboards reporting response times, resolution rates, QA audit grades, and team productivity." }
-  ],
-  faqs: [
-    {
-      q: "What channels and services do you offer?",
-      a: "We provide multichannel Customer Service, Email Support & Ticketing, Live Chat Support, IT Helpdesk (L1/L2), Back-Office Data Operations, and Sales Outreach."
-    },
-    {
-      q: "What industries do you support?",
-      a: "We support a wide variety of industries including SaaS, E-commerce, Technology, Healthcare, Travel, Education, and Financial Services. We customize our training and agent matching depending on your industry needs."
-    },
-    {
-      q: "Do you offer dedicated support teams?",
-      a: "Yes. For clients requiring consistent quality and domain expertise, we build dedicated teams of agents who work exclusively on your brand and build deep knowledge of your products."
-    },
-    {
-      q: "Can your team work across different time zones?",
-      a: "Absolutely. We can cover India, US, UK, Canada, Australia, and Middle East time zones, offering 24/7 coverage or custom coverage schedules to match your peak customer activity windows."
-    },
-    {
-      q: "How quickly can you start?",
-      a: "Typically, we can recruit, train, and launch a team within 10 to 14 business days, depending on the complexity of your workflow, tools, and the number of agents required."
-    },
-    {
-      q: "How do you ensure quality?",
-      a: "We deploy a formal QA framework: dedicated QA auditors grade interactions weekly on custom scorecards. We hold weekly 1-on-1 coaching, conduct Root Cause Analysis on escalations, and provide transparent weekly reporting."
-    },
-    {
-      q: "Do you support weekends and holidays?",
-      a: "Yes. Customer support needs are 24/7. We offer customized plans to handle weekend and holiday spikes so your customers are never left waiting."
     }
   ]
 };

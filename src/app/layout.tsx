@@ -14,30 +14,39 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nexaviq Technologies | Customer Experience & Support Outsourcing Partner",
-    template: "%s | Nexaviq Technologies"
+    default: "Nexaviq Technologies | Customer Operations, Built to Scale",
+    template: "%s | Nexaviq Technologies Pvt. Ltd."
   },
-  description: "Enterprise-grade Business Process Outsourcing (BPO) & CX solutions. High-performing dedicated support teams, 24/7 Live Chat, Email Helpdesk, and Back-Office operations powered by Lean Six Sigma QA.",
+  description: "Nexaviq Technologies helps businesses scale customer experience and business operations through skilled teams, intelligent processes and AI-enabled delivery.",
   keywords: [
-    "BPO", "Business Process Outsourcing", "Customer Service Outsourcing", "Live Chat Support", 
-    "Email Support Services", "Helpdesk outsourcing", "SLA management", 
-    "CX Outsourcing", "Customer Support Team", "Lean Six Sigma BPO", "Back Office Outsourcing"
+    "BPO Company",
+    "BPO Services",
+    "Business Process Outsourcing",
+    "Customer Support Outsourcing",
+    "Customer Service Outsourcing",
+    "Chat Support Services",
+    "Technical Support Outsourcing",
+    "Back Office Outsourcing",
+    "Call Center Outsourcing",
+    "Outsourcing Services India",
+    "AI-Powered BPO",
+    "Customer Experience Outsourcing"
   ],
-  authors: [{ name: "Nexaviq Technologies" }],
-  creator: "Nexaviq Technologies",
+  authors: [{ name: "NEXAVIQ TECHNOLOGIES PVT. LTD." }],
+  creator: "NEXAVIQ TECHNOLOGIES PVT. LTD.",
   metadataBase: new URL("https://nexaviqtechnologies.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://nexaviqtechnologies.com",
-    title: "Nexaviq Technologies | Next-Gen BPO & Customer Experience Outsourcing",
-    description: "Scale your customer operations with dedicated BPO teams, custom QA scorecards, 24/7 omnichannel coverage, and veteran SLA management.",
-    siteName: "Nexaviq Technologies",
+    title: "Nexaviq Technologies | Customer Operations, Built to Scale",
+    description: "Nexaviq Technologies helps businesses scale customer experience and business operations through skilled teams, intelligent processes and AI-enabled delivery.",
+    siteName: "Nexaviq Technologies Pvt. Ltd.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexaviq Technologies | Next-Gen BPO & CX Outsourcing",
-    description: "Next-Gen BPO: Customer Service, 24/7 Live Chat, Email Support, and Back-Office operations built on Lean Six Sigma process excellence.",
+    title: "Nexaviq Technologies | Customer Operations, Built to Scale",
+    description: "Nexaviq Technologies helps businesses scale customer experience and business operations through skilled teams, intelligent processes and AI-enabled delivery.",
   },
 };
 
