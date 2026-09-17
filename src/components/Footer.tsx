@@ -60,41 +60,41 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Core Services */}
+          {/* Column 2: Navigation Pages */}
           <div>
             <h3 className="font-mono font-bold text-xs uppercase tracking-wider text-blue-400 mb-5 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-              Core Services
+              Navigation
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300 font-medium">
               <li>
-                <a href="#services" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
-                  Customer Support (Voice/Chat/Email)
-                </a>
+                <Link href="/services" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
+                  Services Overview
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
-                  Technical Support (L1 &amp; L2)
-                </a>
+                <Link href="/industries" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
+                  Industries We Serve
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
-                  Back-Office &amp; Data Processing
-                </a>
+                <Link href="/why-nexaviq" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
+                  Why Outsource With Nexaviq
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
-                  Sales Support &amp; Lead Outreach
-                </a>
+                <Link href="/how-it-works" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
+                  How We Work (Process)
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
-                  Quality Assurance &amp; Auditing
-                </a>
+                <Link href="/about" className="hover:text-blue-400 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
+                  About Delivery Center
+                </Link>
               </li>
               <li>
                 <Link href="/ai-platform" className="text-violet-400 hover:text-violet-300 hover:translate-x-1 inline-flex items-center gap-1 transition-all">
-                  <span>AI-Enabled Quality Suite &rarr;</span>
+                  <span>Nexaviq AI Platform &rarr;</span>
                 </Link>
               </li>
             </ul>
@@ -104,15 +104,15 @@ export default function Footer() {
           <div>
             <h3 className="font-mono font-bold text-xs uppercase tracking-wider text-blue-400 mb-5 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-              Industries Served
+              Industry Playbooks
             </h3>
             <ul className="space-y-2 text-xs text-slate-300">
-              <li><a href="#industries" className="hover:text-blue-400 transition-colors">E-Commerce &amp; Retail</a></li>
-              <li><a href="#industries" className="hover:text-blue-400 transition-colors">Fintech &amp; Payments</a></li>
-              <li><a href="#industries" className="hover:text-blue-400 transition-colors">SaaS &amp; Technology</a></li>
-              <li><a href="#industries" className="hover:text-blue-400 transition-colors">Healthcare &amp; Biotech</a></li>
-              <li><a href="#industries" className="hover:text-blue-400 transition-colors">Travel &amp; Hospitality</a></li>
-              <li><a href="#industries" className="hover:text-blue-400 transition-colors">Logistics &amp; Supply Chain</a></li>
+              <li><Link href="/industries" className="hover:text-blue-400 transition-colors">E-Commerce &amp; Retail</Link></li>
+              <li><Link href="/industries" className="hover:text-blue-400 transition-colors">Fintech &amp; Payments</Link></li>
+              <li><Link href="/industries" className="hover:text-blue-400 transition-colors">SaaS &amp; Technology</Link></li>
+              <li><Link href="/industries" className="hover:text-blue-400 transition-colors">Healthcare &amp; Biotech</Link></li>
+              <li><Link href="/industries" className="hover:text-blue-400 transition-colors">Travel &amp; Hospitality</Link></li>
+              <li><Link href="/industries" className="hover:text-blue-400 transition-colors">Logistics &amp; Mobility</Link></li>
             </ul>
           </div>
 
@@ -161,8 +161,8 @@ export default function Footer() {
               Security Framework
             </Link>
             <span className="text-slate-700">&bull;</span>
-            <Link href="/about" className="hover:text-slate-200 transition-colors">
-              About Leadership
+            <Link href="/contact" className="hover:text-slate-200 transition-colors">
+              Contact Desk
             </Link>
             <span className="text-slate-700">&bull;</span>
             <Link href="/ai-platform" className="hover:text-blue-400 transition-colors">

@@ -1,41 +1,40 @@
 import React from "react";
 import type { Metadata } from "next";
 import Contact from "@/components/Contact";
-import FAQ from "@/components/FAQ";
-import { MessageSquare } from "lucide-react";
+import { Mail, Sparkles } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Our Customer Support Operations Leadership",
-  description: "Get in touch with Nexaviq Technologies operations. Submit a proposal request or book an instant 15-minute discovery call.",
+  title: "Contact Operations & Schedule Consultation",
+  description: "Get in touch with NEXAVIQ TECHNOLOGIES PVT. LTD. operations leadership. Submit a proposal request or book a discovery call.",
 };
 
 export default function ContactPage() {
   return (
-    <div className="pt-28 font-sans bg-charcoal-950">
+    <div className="pt-24 font-sans bg-[#050816] text-white">
       {/* Page Header */}
-      <section className="bg-charcoal-950 text-white py-16 border-b border-white/10 relative overflow-hidden">
-        <div className="absolute inset-0 ai-grid-pattern opacity-40 pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[25rem] bg-brand-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-4 text-center max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-brand-blue-500/15 text-neon-cyan-400 rounded-full text-xs font-bold uppercase tracking-wider border border-brand-blue-400/30 backdrop-blur-sm">
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>Direct Operations Desk</span>
+      <section className="py-20 border-b border-white/[0.08] relative overflow-hidden bg-gradient-to-b from-[#071B4D]/60 via-[#050816] to-[#050816]">
+        <div className="absolute inset-0 bpo-grid-pattern opacity-30 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45rem] h-[25rem] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-5 max-w-4xl">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+            <Mail className="w-3.5 h-3.5" />
+            <span>Operational Consultation</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Schedule a Consultation or Request a Proposal
+
+          <h1 className="text-4xl sm:text-6xl font-black font-editorial tracking-tight text-white uppercase leading-[1.05]">
+            LET&apos;S DISCUSS <br />
+            <span className="text-gradient-blue">YOUR CUSTOMER OPERATIONS.</span>
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-            Connect with our operations leadership to discuss your support channels, response time requirements, and team rollout.
+
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
+            Tell us about your support channels, ticket volumes, and SLA goals. We will prepare a customized proposal and pod structure within 4 business hours.
           </p>
         </div>
       </section>
 
-      {/* Main Contact & Discovery Booking Component */}
+      {/* Main Contact Form & Coordinates Component */}
       <Contact />
-
-      {/* FAQ Section */}
-      <FAQ />
     </div>
   );
 }
-

@@ -11,13 +11,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/ai-platform`,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/services`,
+      url: `${baseUrl}/industries`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/why-nexaviq`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
@@ -29,13 +35,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/quality`,
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.85,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/ai-platform`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/quality`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
