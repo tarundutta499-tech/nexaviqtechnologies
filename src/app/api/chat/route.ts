@@ -13,7 +13,7 @@ Your role is to assist website visitors, qualify prospective enterprise clients,
 Key Company Facts:
 - Company Name: Nexaviq Technologies
 - Leadership: Founded and managed by operations veterans with 12+ years of Customer Service Operations, Service Desk Management, QA, and Lean Six Sigma methodology.
-- Operations Delivery Center: Level 8, Maker Maxity, Bandra Kurla Complex (BKC), Mumbai, MH 400051, India.
+- Operations Delivery Center: Jaitsar, Distt Sri Ganganagar, Rajasthan, 335702, India.
 - Phone: +91 96641 43424
 - Email: supporthelp@nexaviq.com
 - WhatsApp: https://wa.me/919664143424
@@ -36,7 +36,7 @@ Our Nexaviq AI Powered Quality Platform (/ai-platform):
 - Acoustic & Lexical Empathy Scoring: Evaluates emotional intelligence, customer sentiment, and de-escalation effectiveness.
 
 Security & Compliance:
-- Role-based access control, workstation isolation (zero USB storage), 24/7 CCTV in BKC Mumbai facility, binding NDAs, and GDPR/CCPA compliant DPAs.
+- Role-based access control, workstation isolation (zero USB storage), 24/7 CCTV in our facility, binding NDAs, and GDPR/CCPA compliant DPAs.
 
 Tone of Voice:
 - Professional, knowledgeable, empathetic, concise, and focused on operational excellence.
@@ -131,12 +131,12 @@ function getIntelligentFallbackResponse(userMessage: string): {
     query.includes("phone") ||
     query.includes("contact") ||
     query.includes("address") ||
-    query.includes("mumbai") ||
-    query.includes("bkc")
+    query.includes("rajasthan") ||
+    query.includes("jaitsar")
   ) {
     return {
       reply:
-        "You can connect directly with our operations desk in Bandra Kurla Complex (BKC), Mumbai:\n• Phone: +91 96641 43424\n• Email: supporthelp@nexaviq.com\n• WhatsApp: Instant Live Chat available 24/7.",
+        "You can connect directly with our operations desk:\n• Address: Jaitsar, Distt Sri Ganganagar, Rajasthan, 335702\n• Phone: +91 96641 43424\n• Email: supporthelp@nexaviq.com\n• WhatsApp: Instant Live Chat available 24/7.",
       actionType: "whatsapp",
       actionText: "Chat on WhatsApp Now",
       actionUrl: companyConfig.contact.whatsapp,
@@ -152,7 +152,7 @@ function getIntelligentFallbackResponse(userMessage: string): {
   ) {
     return {
       reply:
-        "We maintain enterprise zero-trust standards: role-based access control, workstation isolation (zero USB storage), biometric access in our BKC Mumbai delivery center, and legally enforceable NDAs and DPAs before knowledge transfer.",
+        "We maintain enterprise zero-trust standards: role-based access control, workstation isolation (zero USB storage), biometric access in our delivery center, and legally enforceable NDAs and DPAs before knowledge transfer.",
       actionType: "proposal",
       actionText: "View Security Framework",
       actionUrl: "/quality",

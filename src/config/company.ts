@@ -12,8 +12,8 @@ export const companyConfig = {
     email: "supporthelp@nexaviq.com",
     phone: "+91 96641 43424",
     whatsapp: "https://wa.me/919664143424",
-    address: "Level 8, Maker Maxity, Bandra Kurla Complex, Mumbai, MH 400051, India",
-    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2133276634863!2d72.84883497585097!3d19.0543666526543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91e70ffebbd%3A0xe5a3639a04f2f458!2sMaker%20Maxity!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+    address: "Jaitsar, Distt Sri Ganganagar, Rajasthan, 335702, India",
+    googleMapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55685.2777821683!2d73.61366115820313!3d29.28919690000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391583d7a8d5e89d%3A0x63ebefc0beeece01!2sJaitsar%2C%20Rajasthan%20335702!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
   },
   techStack: [
     { name: "Zendesk", category: "Helpdesk & Ticketing", tag: "Certified Suite" },
@@ -31,8 +31,8 @@ export const companyConfig = {
     {
       id: "ops-floor",
       title: "Delivery Operations Floor",
-      badge: "Mumbai Delivery Hub",
-      description: "Our modern operations hub in Bandra Kurla Complex (BKC), Mumbai is equipped with ergonomic workstations, multi-monitor desktop setups, noise-canceling headsets, and supervised floor management.",
+      badge: "Operations Hub",
+      description: "Our modern operations hub in Jaitsar, Sri Ganganagar, Rajasthan is equipped with ergonomic workstations, multi-monitor desktop setups, noise-canceling headsets, and supervised floor management.",
       features: [
         "High-performance desktop PCs & dual-monitor setups",
         "Enterprise IP telephony with active noise cancellation",

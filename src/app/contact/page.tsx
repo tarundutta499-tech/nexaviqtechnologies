@@ -5,8 +5,8 @@ import FAQ from "@/components/FAQ";
 import { MessageSquare } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Operations & Schedule a Consultation",
-  description: "Get in touch with Nexaviq Technologies operations in Mumbai, India. Submit a proposal request or book an instant 15-minute discovery call.",
+  title: "Contact Our Customer Support Operations Leadership",
+  description: "Get in touch with Nexaviq Technologies operations. Submit a proposal request or book an instant 15-minute discovery call.",
 };
 
 export default function ContactPage() {

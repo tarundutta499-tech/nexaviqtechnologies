@@ -22,7 +22,7 @@ export default function Hero() {
   const [chatMessages, setChatMessages] = useState([
     { sender: "customer", text: "Hi, I need to update my shipping address for order #4092.", time: "10:02 AM" },
     { sender: "agent", text: "Hello! I can definitely help with that. Let me look up your order details.", time: "10:02 AM" },
-    { sender: "agent", text: "I have updated the delivery address to Maker Maxity, Bandra Kurla Complex, Mumbai. You'll receive a confirmation email shortly.", time: "10:03 AM" }
+    { sender: "agent", text: "I have updated the delivery address to Jaitsar, Sri Ganganagar, Rajasthan. You'll receive a confirmation email shortly.", time: "10:03 AM" }
   ]);
   const [newMessage, setNewMessage] = useState("");
 
